@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Week41 = () => {
   return (

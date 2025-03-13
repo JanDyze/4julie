@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const INITIAL_ITEMS = 40;
 const COLUMNS = 5;
@@ -40,7 +40,7 @@ const Gallery = () => {
             const scrollY = window.scrollY;
             setScrollOffset(scrollY);
 
-            columnRefs.current.forEach((column, colIndex) => {
+            columnRefs.current.forEach((column) => {
                 if (!column) return;
 
                 const maxScroll = column.scrollHeight - window.innerHeight;
