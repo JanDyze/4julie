@@ -12,7 +12,7 @@ const Week1 = () => {
 
     return (
         <>
-            <Modal date="2025-03-10" redirectTo="/1" />
+            <Modal date="2025-03-17" redirectTo="/" />
             {showPoem && (
                 <Poem
                     title="Iba Na Ang 'Yong Dalampasigan"
