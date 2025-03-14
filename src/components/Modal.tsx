@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import QRCodeButton from "./QRCodeButton";
 
 type ModalProps = {
   date: string; // Expected format: YYYY-MM-DD
