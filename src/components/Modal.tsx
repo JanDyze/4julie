@@ -17,7 +17,7 @@ const getRandomSweetName = () => {
 
 const Modal = ({ date, redirectTo }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [sweetName, setSweetName] = useState(getRandomSweetName());
+  const [sweetName] = useState(getRandomSweetName());
 
   const navigate = useNavigate();
 
