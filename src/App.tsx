@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "@/contents/Home";
 import NotFound from "@/contents/NotFound";
-import ScreenSize from "@/components/ScreenSize";
+// import ScreenSize from "@/components/ScreenSize";
 import Gallery from "@/contents/Gallery";
 
 // Import all weeks dynamically
@@ -95,7 +95,7 @@ const weekRoutes = [
 function App() {
   return (
     <div>
-      <ScreenSize />
+      {/* <ScreenSize /> */}
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
