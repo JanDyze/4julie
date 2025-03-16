@@ -17,6 +17,7 @@ const ScreenSize = () => {
   });
 
   const [isVisible, setIsVisible] = useState(false); // Toggle visibility
+  const [dateTime, setDateTime] = useState(new Date());
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,8 +28,17 @@ const ScreenSize = () => {
       });
     };
 
+    const updateTime = () => {
+      setDateTime(new Date());
+    };
+
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const interval = setInterval(updateTime, 1000);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -48,6 +58,9 @@ const ScreenSize = () => {
             Width: {size.width}px | Height: {size.height}px
           </p>
           <p className="text-sm font-bold">Screen Size: {size.screen}</p>
+          <p className="text-sm">
+            {dateTime.toLocaleDateString()} {dateTime.toLocaleTimeString()}
+          </p>
         </div>
       )}
     </div>
