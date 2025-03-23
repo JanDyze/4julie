@@ -39,16 +39,14 @@ const LoveLetter: React.FC<LoveLetterProps> = ({ content }) => {
         const scrollTop = window.scrollY; // Page scroll position
         const translateY = Math.min(0, Math.max(-maxTranslate, -scrollTop));
         letter.style.transform = `translateY(${translateY}px)`;
-        // Hide hint once scrolling starts
         if (scrollTop > 0) setHasScrolled(true);
       };
 
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     } else {
-      // Reset transform when not full size
       letter.style.transform = `translateY(0px)`;
-      setHasScrolled(false); // Reset scroll state when closing
+      setHasScrolled(false);
     }
   }, [isFullSize]);
 
@@ -85,11 +83,11 @@ const LoveLetter: React.FC<LoveLetterProps> = ({ content }) => {
       ></div>
       {isFullSize && !hasScrolled && (
         <div
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-40 flex items-center justify-center bg-[#ff6b6b] text-white text-sm font-['Sedan'] px-4 py-2 rounded-full shadow-md animate-bounce"
+          className="absolute bottom-2 left-1/2 -translate-x-1/2 z-40 text-gray-600 text-sm font-['Sedan'] italic opacity-90 pointer-events-none animate-bounce bg-white/90 p-2 rounded-lg"
         >
-          <span>Scroll down to unveil my heart’s words</span>
+          <span>Gently scroll down to read my heart’s whisper💘...</span>
           <svg
-            className="ml-2 w-4 h-4"
+            className="inline-block ml-1 w-4 h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
