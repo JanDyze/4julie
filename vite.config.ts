@@ -6,6 +6,9 @@ import path from "path";
 export default defineConfig({
   base: "/",
   server: {
+    allowedHosts: [
+      'dyze-app.com', // Add this line
+    ],
     host: true, // Expose to network
     port: 5173, // Default Vite port
   },
