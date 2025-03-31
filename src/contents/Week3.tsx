@@ -14,7 +14,9 @@ const Week1 = () => {
         <div className="min-h-[1000vh]"> {/* Add enough height to enable scrolling */}
             <Modal date="2025-04-01" redirectTo="/" />
             {showLetter && (
-               wala pa :<
+               <div>
+                Wala pa 😢
+               </div>
             )}
         </div>
     );
