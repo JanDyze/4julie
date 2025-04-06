@@ -217,7 +217,7 @@ const Week4: React.FC = () => {
     <div className="min-h-screen bg-gray-100 p-4">
      {showApology && <ApologyModal onClose={() => setShowApology(false)} />}
 
-      <Modal date="2025-04-01" redirectTo="/" />
+      <Modal date="2025-04-07" redirectTo="/" />
 
       {showJokes && (
         <div className="max-w-6xl mx-auto">
