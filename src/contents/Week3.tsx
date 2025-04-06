@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import LoveLetter from "@/components/LoveLetter/LoveLetter"; // Adjust the import path as needed
 import Modal from "@/components/Modal";
 
 const Week1 = () => {
