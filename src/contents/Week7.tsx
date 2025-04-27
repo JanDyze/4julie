@@ -244,7 +244,7 @@ const Week7 = () => {
   const [showContent, setShowContent] = useState(false);
   const [showInstruction, setShowInstruction] = useState(true);
   const currentPrompt = getDailyPrompt();
-  const { cardClass, textClass, variants, icon } = promptStyles[
+  const { cardClass, textClass, icon } = promptStyles[
     currentPrompt
   ] || {
     cardClass:
