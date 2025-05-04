@@ -253,7 +253,7 @@ const Week4: React.FC = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={handleOverlayClick}
-              >
+              > 
                 <motion.div
                   className="relative w-80 h-48 perspective-1000"
                   variants={cardVariants}
