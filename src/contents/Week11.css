@@ -1,0 +1,100 @@
+/* Ensure canvas takes full screen */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Style for button */
+button {
+  font-family: 'Georgia', serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Responsive font sizes using vw for better scaling */
+.text-3xl {
+  font-size: 8vw;
+}
+
+.text-4xl {
+  font-size: 9vw;
+}
+
+.text-base {
+  font-size: 4.5vw;
+}
+
+.text-lg {
+  font-size: 5.5vw;
+}
+
+.text-xl {
+  font-size: 6vw;
+}
+
+.text-2xl {
+  font-size: 7vw;
+}
+
+/* Ensure modal is centered and responsive */
+@media (max-width: 640px) {
+  .max-w-md {
+    max-width: 85vw;
+  }
+}
+
+/* Star div styles */
+.star {
+  position: absolute;
+  width: 20px; /* Increase from original size */
+  height: 20px;
+  background-color: #ffeb3b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 20;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 8px 3px rgba(255, 235, 59, 0.6);
+  transition: transform 0.2s ease;
+}
+
+.star.active {
+  box-shadow: 0 0 15px 6px rgba(255, 255, 0, 0.8);
+  transform: scale(1.2);
+}
+
+.star-letter {
+  font-size: 10px; /* Adjust this based on your font and circle size */
+  line-height: 1;
+  text-align: center;
+}
+
+/* Touch area for mobile */
+.star::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.star.active {
+  background-color: rgb(255, 255, 0);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
